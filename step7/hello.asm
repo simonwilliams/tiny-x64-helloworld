@@ -31,10 +31,10 @@ phdr:           ; Elf64_Phdr
 phdrsize  equ  $ - phdr
 
 _start:
-  mov eax, 1
+  inc al
   mov edi, eax
   mov esi, message
-  mov edx, 13
+  mov dl, 13
   syscall
   xor eax, eax
   mov al, 60
