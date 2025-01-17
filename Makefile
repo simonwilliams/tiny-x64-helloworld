@@ -18,3 +18,8 @@ list:
 	@ls -U -l {$(all)}/hello.out
 .PHONY: list
 
+test:
+	@@for dir in {$(all)}; do \
+	./test.sh $$dir; \
+	done
+.PHONY: test

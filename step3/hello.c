@@ -1,9 +1,10 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <unistd.h>
 
 int
 nomain()
 {
   printf("hello, world\n");
-  _exit(0);
+  exit(0);
 }
