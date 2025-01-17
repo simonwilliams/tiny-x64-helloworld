@@ -1,5 +1,4 @@
 build:
 	nasm -f elf64 hello.asm
-	ld hello.o -T link.lds -o hello.out
-	strip hello.out
+	ld hello.o -nmagic --strip-all -T link.lds -o hello.out
 .PHONY: build
