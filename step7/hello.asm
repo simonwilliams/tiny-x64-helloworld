@@ -32,7 +32,7 @@ phdrsize  equ  $ - phdr
 
 _start:
   mov eax, 1
-  mov edi, 1
+  mov edi, eax
   mov esi, message
   mov edx, 13
   syscall
