@@ -10,6 +10,7 @@ nomain:
   mov esi, message
   mov edx, 13
   syscall
-  mov eax, 60
+  xor eax, eax
+  mov al, 60
   xor edi, edi
   syscall
