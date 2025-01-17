@@ -5,11 +5,11 @@ section .text
 
 global nomain
 nomain:
-  mov rax, 1
-  mov rdi, 1
-  mov rsi, message
-  mov rdx, 13
+  mov eax, 1
+  mov edi, 1
+  mov esi, message
+  mov edx, 13
   syscall
-  mov rax, 60
-  xor rdi, rdi
+  mov eax, 60
+  xor edi, edi
   syscall

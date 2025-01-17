@@ -3,21 +3,21 @@ char *str = "hello, world\n";
 void
 myprint()
 {
-  asm("movq $1, %%rax \n"
-      "movq $1, %%rdi \n"
+  asm("mov $1, %%eax \n"
+      "mov $1, %%edi \n"
       "movq %0, %%rsi \n"
-      "movq $13, %%rdx \n"
+      "mov $13, %%edx \n"
       "syscall \n"
       : // no output
       : "r"(str)
-      : "rax", "rdi", "rsi", "rdx");
+      : "eax", "edi", "rsi", "edx");
 }
 
 void
 myexit()
 {
-  asm("movq $60, %rax \n"
-      "xor %rdi, %rdi \n"
+  asm("mov $60, %eax \n"
+      "xor %edi, %edi \n"
       "syscall \n");
 }
 
